@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -142,7 +141,7 @@ export default function ProjectsPage() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Have a project in mind?</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            Let's work together to create something amazing. Our team is ready to bring your vision to life.
+            Let&apos;s work together to create something amazing. Our team is ready to bring your vision to life.
           </p>
           <Link
             href="/contact"
