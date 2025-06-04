@@ -1,78 +1,8 @@
 "use client";
 
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import { useState } from "react";
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: ""
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{
-    success?: boolean;
-    message?: string;
-  } | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      // Kirim data ke API endpoint
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(result.error || 'Terjadi kesalahan saat mengirim pesan');
-      }
-
-      // Reset form setelah berhasil submit
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-      
-      setSubmitStatus({
-        success: true,
-        message: "Pesan Anda telah dikirim ke jerlyjy@gmail.com. Kami akan menghubungi Anda segera."
-      });
-    } catch (error) {
-      console.error("Error sending message:", error);
-      setSubmitStatus({
-        success: false,
-        message: "Terjadi kesalahan saat mengirim pesan. Silakan coba lagi."
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -89,185 +19,69 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="py-20 px-4 md:px-8 lg:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
-              
-              {submitStatus && (
-                <div className={`p-4 mb-6 rounded-md ${submitStatus.success ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'}`}>
-                  {submitStatus.message}
-                </div>
-              )}
-              
-              <form className="space-y-6" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      value={formData.firstName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      value={formData.lastName}
-                      onChange={handleChange}
-                      className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-800"
-                    required
-                  ></textarea>
-                </div>
-                <div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className={`px-6 py-3 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            {/* Contact Information */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
-              <p className="text-gray-600 dark:text-gray-300 mb-8">
-                Feel free to contact us directly using the following information or fill out the form and we'll get back to you as soon as possible.
+        <div className="max-w-3xl mx-auto">
+          {/* Contact Information */}
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+            <p className="text-gray-600 dark:text-gray-300 mb-8">
+              Feel free to contact us directly using the following information.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+              <div className="text-blue-600 dark:text-blue-400 mb-4">
+                <FaMapMarkerAlt className="h-8 w-8 mx-auto" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Our Location</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                Jl. Sudirman No. 123<br />
+                Jakarta Pusat 10220<br />
+                Indonesia
               </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="text-blue-600 dark:text-blue-400 mt-1">
-                    <FaMapMarkerAlt className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Our Location</h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      Jl. Sudirman No. 123<br />
-                      Jakarta Pusat 10220<br />
-                      Indonesia
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="text-blue-600 dark:text-blue-400 mt-1">
-                    <FaEnvelope className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Email Us</h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      jerlyjy@gmail.com<br />
-                      support@moonastrastudio.com
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-4">
-                  <div className="text-blue-600 dark:text-blue-400 mt-1">
-                    <FaPhone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-medium mb-1">Call Us</h3>
-                    <p className="text-gray-600 dark:text-gray-300">
-                      +62 812 3456 7890<br />
-                      +62 21 1234 5678
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-12">
-                <h3 className="text-lg font-medium mb-4">Working Hours</h3>
-                <table className="w-full text-gray-600 dark:text-gray-300">
-                  <tbody>
-                    <tr>
-                      <td className="py-2">Monday - Friday:</td>
-                      <td className="py-2">9:00 AM - 6:00 PM</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">Saturday:</td>
-                      <td className="py-2">10:00 AM - 4:00 PM</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2">Sunday:</td>
-                      <td className="py-2">Closed</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
             </div>
+            
+            <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+              <div className="text-blue-600 dark:text-blue-400 mb-4">
+                <FaEnvelope className="h-8 w-8 mx-auto" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Email Us</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                contact@moonastrastudio.com<br />
+                support@moonastrastudio.com
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800 rounded-lg shadow-sm">
+              <div className="text-blue-600 dark:text-blue-400 mb-4">
+                <FaPhone className="h-8 w-8 mx-auto" />
+              </div>
+              <h3 className="text-lg font-medium mb-2">Call Us</h3>
+              <p className="text-gray-600 dark:text-gray-300">
+                +62 812 3456 7890<br />
+                +62 21 1234 5678
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-16 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm text-center">
+            <h3 className="text-lg font-medium mb-4">Working Hours</h3>
+            <table className="w-full max-w-md mx-auto text-gray-600 dark:text-gray-300">
+              <tbody>
+                <tr>
+                  <td className="py-2 text-right pr-4">Monday - Friday:</td>
+                  <td className="py-2 text-left pl-4">9:00 AM - 6:00 PM</td>
+                </tr>
+                <tr>
+                  <td className="py-2 text-right pr-4">Saturday:</td>
+                  <td className="py-2 text-left pl-4">10:00 AM - 4:00 PM</td>
+                </tr>
+                <tr>
+                  <td className="py-2 text-right pr-4">Sunday:</td>
+                  <td className="py-2 text-left pl-4">Closed</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

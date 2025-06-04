@@ -60,13 +60,13 @@ export default function Home() {
         >
           <div className="relative w-80 h-60 md:w-[450px] md:h-[320px] rounded-full overflow-hidden">
             {/* Logo Moon Astra Studio */}
-            <Image 
+        <Image
               src="/images/MoonAstra.png" 
               alt="Moon Astra Studio Logo" 
               fill
               className="object-contain"
-              priority
-            />
+          priority
+        />
           </div>
         </motion.div>
       </section>
