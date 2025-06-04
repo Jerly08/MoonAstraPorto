@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Moon Astra Studio - Portofolio Website
 
-## Getting Started
+Website portofolio untuk Moon Astra Studio, sebuah agensi digital yang menawarkan layanan pengembangan web, desain UI/UX, dan digital marketing.
 
-First, run the development server:
+## Fitur
+
+- **Desain Modern**: Antarmuka yang bersih dan modern dengan dukungan tema gelap/terang
+- **Responsif**: Tampilan yang responsif dan optimal di semua perangkat
+- **Animasi**: Efek animasi halus menggunakan Framer Motion
+- **SEO-Friendly**: Meta tag yang dioptimalkan untuk setiap halaman
+- **Performa Tinggi**: Dibangun dengan Next.js untuk performa yang optimal
+
+## Teknologi yang Digunakan
+
+- [Next.js](https://nextjs.org/) - React framework dengan fitur SSR dan SSG
+- [React](https://reactjs.org/) - Library JavaScript untuk membangun antarmuka pengguna
+- [TypeScript](https://www.typescriptlang.org/) - Superset JavaScript dengan tipe statis
+- [Tailwind CSS](https://tailwindcss.com/) - Framework CSS utility-first
+- [Framer Motion](https://www.framer.com/motion/) - Library animasi untuk React
+- [React Icons](https://react-icons.github.io/react-icons/) - Koleksi ikon populer untuk React
+- [Next Themes](https://github.com/pacocoursey/next-themes) - Dukungan tema untuk Next.js
+
+## Halaman
+
+- **Home**: Halaman beranda dengan pengenalan dan highlight layanan
+- **About**: Informasi tentang Moon Astra Studio, nilai-nilai, dan tim
+- **Services**: Daftar layanan yang ditawarkan dengan detail
+- **Projects**: Portofolio proyek yang telah dikerjakan
+- **Contact**: Formulir kontak dan informasi kontak
+
+## Cara Menjalankan Proyek
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/yourusername/moon-astra-studio.git
+   cd moon-astra-studio
+   ```
+
+2. Install dependensi:
+   ```bash
+   npm install
+   ```
+
+3. Jalankan server pengembangan:
+   ```bash
+   npm run dev
+   ```
+
+4. Buka [http://localhost:3000](http://localhost:3000) di browser Anda.
+
+## Membangun untuk Produksi
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Kemudian, untuk menjalankan versi produksi:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Struktur Folder
 
-## Learn More
+- `public/` - Aset statis seperti gambar dan favicon
+- `src/app/` - Halaman aplikasi menggunakan App Router Next.js
+- `src/components/` - Komponen React yang dapat digunakan kembali
+  - `sections/` - Komponen bagian halaman yang lebih besar
+  - `ui/` - Komponen UI yang lebih kecil dan dapat digunakan kembali
+- `src/lib/` - Fungsi utilitas dan konfigurasi
+- `src/hooks/` - Custom React hooks
+- `src/types/` - Definisi tipe TypeScript
 
-To learn more about Next.js, take a look at the following resources:
+## Pengembangan Selanjutnya
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Implementasi API untuk formulir kontak
+- Integrasi CMS untuk manajemen konten
+- Menambahkan halaman blog
+- Implementasi analitik
+- Optimalisasi performa lebih lanjut
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Lisensi
 
-## Deploy on Vercel
+[MIT](LICENSE)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Dibuat oleh Moon Astra Studio
