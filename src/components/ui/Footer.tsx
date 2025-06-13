@@ -48,7 +48,7 @@ export default function Footer() {
                 <FaTwitter className="h-5 w-5" />
               </a>
               <a 
-                href="mailto:contact@moonastrastudio.com"
+                href="mailto:moonastrastudio@gmail.com"
                 className="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
                 aria-label="Email"
               >
@@ -86,13 +86,13 @@ export default function Footer() {
             </h3>
             <ul className="mt-4 space-y-3">
               <li className="text-gray-600 dark:text-gray-400">
-                Email: contact@moonastrastudio.com
+                Email: moonastrastudio@gmail.com
               </li>
               <li className="text-gray-600 dark:text-gray-400">
-                Phone: +62 812 3456 7890
+                Phone: +62 881 0825 12525
               </li>
               <li className="text-gray-600 dark:text-gray-400">
-                Location: Jakarta, Indonesia
+                Location: Jl. Rw. Jaya No.49, Rawasari, Jakarta Pusat
               </li>
             </ul>
           </div>
