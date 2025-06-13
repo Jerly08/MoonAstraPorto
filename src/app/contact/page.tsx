@@ -35,9 +35,9 @@ export default function ContactPage() {
               </div>
               <h3 className="text-lg font-medium mb-2">Our Location</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Jl. Sudirman No. 123<br />
-                Jakarta Pusat 10220<br />
-                Indonesia
+                Jl. Rw. Jaya No.49, Rawasari<br />
+                Kec. Cemp. Putih, Kota Jakarta Pusat<br />
+                DKI Jakarta 10570
               </p>
             </div>
             
@@ -47,8 +47,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-lg font-medium mb-2">Email Us</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                contact@moonastrastudio.com<br />
-                support@moonastrastudio.com
+                moonastrastudio@gmail.com
               </p>
             </div>
             
@@ -58,8 +57,7 @@ export default function ContactPage() {
               </div>
               <h3 className="text-lg font-medium mb-2">Call Us</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                +62 812 3456 7890<br />
-                +62 21 1234 5678
+                +62 881 0825 12525
               </p>
             </div>
           </div>
@@ -70,14 +68,14 @@ export default function ContactPage() {
               <tbody>
                 <tr>
                   <td className="py-2 text-right pr-4">Monday - Friday:</td>
-                  <td className="py-2 text-left pl-4">9:00 AM - 6:00 PM</td>
+                  <td className="py-2 text-left pl-4">09:00 - 17:00</td>
                 </tr>
                 <tr>
                   <td className="py-2 text-right pr-4">Saturday:</td>
-                  <td className="py-2 text-left pl-4">10:00 AM - 4:00 PM</td>
+                  <td className="py-2 text-left pl-4">10:00 - 15:00</td>
                 </tr>
                 <tr>
-                  <td className="py-2 text-right pr-4">Sunday:</td>
+                  <td className="py-2 text-right pr-4">Sunday/Public Holiday:</td>
                   <td className="py-2 text-left pl-4">Closed</td>
                 </tr>
               </tbody>
