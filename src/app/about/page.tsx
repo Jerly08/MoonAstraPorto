@@ -23,13 +23,16 @@ export default function AboutPage() {
             >
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Moon Astra Studio was founded in 2023 with a simple mission: to create digital experiences that inspire, engage, and deliver results. What started as a small team of passionate individuals has grown into a full-service digital studio with expertise across web development, design, and digital marketing.
+                Founded in 2025, Moon Astra Studio was built on a simple mission: to create digital experiences that inspire, engage, and deliver results. What began as a small team of passionate individuals has grown into a full-service digital studio with expertise across web development, design, digital marketing, digital art, and Web3 technology.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                We believe that great design and development should be accessible to everyone, which is why we work with businesses of all sizes - from startups to established enterprises.
+                We believe that creativity and technology go hand in hand. Our team brings together designers, developers, strategists, and digital artists to build experiences that not only look beautiful but also function seamlessly and drive real impact.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                From crafting elegant websites and branding that capture your vision, to launching marketing campaigns that resonate — and now offering custom digital art commissions and Web3 development for those stepping into the next generation of the internet — we're here to help businesses of all sizes grow, evolve, and stand out.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                Our approach combines creativity with technical expertise, allowing us to deliver solutions that not only look beautiful but perform exceptionally well.
+                At Moon Astra Studio, we're not just building projects — we're building possibilities.
               </p>
             </motion.div>
             <motion.div
