@@ -92,60 +92,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-6">Meet Our Team</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              The talented people behind our success
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Jane Doe",
-                role: "Founder & Creative Director",
-                bio: "Jane has over 10 years of experience in design and web development.",
-                bgColor: "from-pink-500 to-red-600"
-              },
-              {
-                name: "John Smith",
-                role: "Lead Developer",
-                bio: "John is an expert in frontend and backend technologies with a passion for clean code.",
-                bgColor: "from-blue-500 to-cyan-600"
-              },
-              {
-                name: "Emily Chen",
-                role: "UI/UX Designer",
-                bio: "Emily creates beautiful interfaces that are intuitive and engaging for users.",
-                bgColor: "from-purple-500 to-indigo-600"
-              }
-            ].map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 * index }}
-              >
-                <div className="relative h-80 w-full">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${member.bgColor} flex items-center justify-center text-white text-4xl font-bold`}>
-                    {member.name.split(' ').map(part => part[0]).join('')}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-blue-600 dark:text-blue-400 mb-3">{member.role}</p>
-                  <p className="text-gray-600 dark:text-gray-300">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 } 
