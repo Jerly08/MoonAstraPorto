@@ -29,10 +29,10 @@ export default function AboutPage() {
                 We believe that creativity and technology go hand in hand. Our team brings together designers, developers, strategists, and digital artists to build experiences that not only look beautiful but also function seamlessly and drive real impact.
               </p>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                From crafting elegant websites and branding that capture your vision, to launching marketing campaigns that resonate — and now offering custom digital art commissions and Web3 development for those stepping into the next generation of the internet — we're here to help businesses of all sizes grow, evolve, and stand out.
+                From crafting elegant websites and branding that capture your vision, to launching marketing campaigns that resonate — and now offering custom digital art commissions and Web3 development for those stepping into the next generation of the internet — we&apos;re here to help businesses of all sizes grow, evolve, and stand out.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                At Moon Astra Studio, we're not just building projects — we're building possibilities.
+                At Moon Astra Studio, we&apos;re not just building projects — we&apos;re building possibilities.
               </p>
             </motion.div>
             <motion.div
