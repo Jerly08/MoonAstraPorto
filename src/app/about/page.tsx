@@ -106,7 +106,7 @@ export default function AboutPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3">Our Brand Story</h3>
                 <p className="text-center max-w-md">
-                  The name "Moon Astra" represents our philosophy of reaching for the stars while staying grounded. Like the moon, we reflect creativity and illuminate new possibilities for our clients.
+                  The name &apos;Moon Astra&apos; represents our philosophy of reaching for the stars while staying grounded. Like the moon, we reflect creativity and illuminate new possibilities for our clients.
                 </p>
               </div>
             </motion.div>
