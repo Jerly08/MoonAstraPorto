@@ -1,0 +1,5 @@
+[33mcommit 4a6d2fa26cdf3ec764324fd5ef88ed39d244c8b1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Jeremy <jeremiakaligis@gmail.com>
+Date:   Thu Jun 19 11:46:57 2025 +0700
+
+    Fix dark mode implementation

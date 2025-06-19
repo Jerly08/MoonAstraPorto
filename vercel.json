@@ -1,0 +1,7 @@
+{
+  "buildCommand": "next build",
+  "ignoreCommand": "next lint --no-cache",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "devCommand": "next dev"
+} 

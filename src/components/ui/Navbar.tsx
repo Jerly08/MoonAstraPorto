@@ -10,7 +10,9 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const navLinks = [
     { href: "/", label: "Home" },

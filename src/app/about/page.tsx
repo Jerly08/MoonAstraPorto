@@ -123,20 +123,20 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               {[
                 {
-                  step: "Listen",
-                  description: "We begin by understanding your unique challenges and goals."
+                  step: `Listen`,
+                  description: `We begin by understanding your unique challenges and goals.`
                 },
                 {
-                  step: "Plan",
-                  description: "We create a comprehensive strategy tailored to your specific needs."
+                  step: `Plan`,
+                  description: `We create a comprehensive strategy tailored to your specific needs.`
                 },
                 {
-                  step: "Create",
-                  description: "Our team brings ideas to life with creativity and technical expertise."
+                  step: `Create`,
+                  description: `Our team brings ideas to life with creativity and technical expertise.`
                 },
                 {
-                  step: "Deliver",
-                  description: "We implement solutions that exceed expectations and drive results."
+                  step: `Deliver`,
+                  description: `We implement solutions that exceed expectations and drive results.`
                 }
               ].map((process, index) => (
                 <div key={index} className="flex flex-col items-center text-center">
@@ -167,19 +167,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Excellence",
-                description: "We are committed to delivering the highest quality in everything we create.",
-                icon: "✨"
+                title: `Excellence`,
+                description: `We are committed to delivering the highest quality in everything we create.`,
+                icon: `✨`
               },
               {
-                title: "Innovation",
-                description: "We constantly explore new technologies and approaches to solve problems.",
-                icon: "💡"
+                title: `Innovation`,
+                description: `We constantly explore new technologies and approaches to solve problems.`,
+                icon: `💡`
               },
               {
-                title: "Collaboration",
-                description: "We believe the best results come from working closely with our clients.",
-                icon: "🤝"
+                title: `Collaboration`,
+                description: `We believe the best results come from working closely with our clients.`,
+                icon: `🤝`
               }
             ].map((value, index) => (
               <motion.div

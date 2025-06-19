@@ -1,0 +1,6 @@
+# Trigger file for new Vercel build
+# Instructions:
+# 1. Delete postcss.config.mjs to avoid conflicts
+# 2. Use only postcss.config.js
+# 3. Ensure all quotes in about page are escaped
+# Timestamp: 2024-06-19 
